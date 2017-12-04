@@ -62,7 +62,7 @@ class efun_get_infos(zabbix_function):
 class efun_connect_zabbix(zabbix_function):
 
     new_zabbix_users = ""
-    new_zabbix_password = "VoeHy5bq0{xs"
+    new_zabbix_password = "***"
 
     #新的用户登录实例化
     @classmethod
@@ -143,7 +143,7 @@ class efun_tools():
     def to_chinese(cls, english):
         try:
             if english:
-                url = 'http://fanyi.youdao.com/openapi.do?keyfrom=imyours1991&key=708486460&type=data&doctype=json&version=1.1'
+                url = 'http://fanyi.youdao.com/openapi.do?keyfrom=****&key=****&type=data&doctype=json&version=1.1'
                 res = json.loads(urllib2.urlopen(url, urllib.urlencode({'q': english})).read())
                 if res['errorCode'] == 0:
                     return res['translation'][0]
@@ -172,9 +172,9 @@ class efun_tools():
 #定义openva扫描
 class efun_openvas():
 
-    __host = "58.229.184.19"
-    __user = "admin"
-    __password = "admin"
+    __host = "openvasip"
+    __user = "openvas user"
+    __password = "openvas password"
     __port = 9390
     __timeout = 300
 
