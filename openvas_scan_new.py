@@ -272,7 +272,7 @@ class efun_openvas():
         try:
             return len(cls.conn_openvas().get_running_scans().keys())
         except:
-            return False
+            return 100
 
 all_ip_infos = {}
 
@@ -303,7 +303,7 @@ def Second():
         print u"%s 已经生成" % cut_ip_file
     else:
         num = efun_openvas.get_running_num()
-        if num and num > 5:
+        if num > 5:
             print u"扫描任务过多:%s 稍等" %num
         else:
             scan_trigger_ip = {}
